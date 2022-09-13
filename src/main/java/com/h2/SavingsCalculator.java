@@ -8,10 +8,13 @@ public class SavingsCalculator {
     private float[] debits;
 
     public static void main(String[] args) {
-        float[] credits = new float[2]; //{10.0f, 20.0f}
-        float[] debits = new float[2]; //{5.0f};
+//        float[] credits = new float[2]; //{10.0f, 20.0f}
+//        float[] debits = new float[2]; //{5.0f};
         String[] creditsAsString = args[0].split(",");
         String[] debitsAsString = args[1].split(",");
+
+        final float[] credits = new float[creditsAsString.length];
+        final float[] debits = new float[debitsAsString.length];
 
         for(int i=0; i<creditsAsString.length; i++){
             credits[i] = Float.parseFloat(creditsAsString[i]);
